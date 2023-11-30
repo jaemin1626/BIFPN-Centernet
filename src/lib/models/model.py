@@ -14,6 +14,7 @@ from .networks.resnet_dcn import get_pose_net as get_pose_net_dcn
 from .networks.large_hourglass import get_large_hourglass_net
 from .networks.bifpn_hourglass import get_bifpn_hourglass
 # from .networks.feature_bifpn import get_bifpn_net
+from .networks.large_hourglass_Attention import get_large_hourglass_Attention_net
 
 _model_factory = {
   'res': get_pose_net, # default Resnet with deconv
@@ -22,6 +23,7 @@ _model_factory = {
   'resdcn': get_pose_net_dcn,
   'hourglass': get_large_hourglass_net,
   'bifpn_hourglass': get_bifpn_hourglass,
+  'bifpn_hourglass_Attention' : get_large_hourglass_Attention_net
   # 'bifpn' : get_bifpn_net
 }
 
