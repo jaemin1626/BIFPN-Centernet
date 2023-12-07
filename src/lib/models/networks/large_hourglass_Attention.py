@@ -347,7 +347,7 @@ class kp_module2(nn.Module):
 
         low1 = self.low1(max1)
         
-        if(self.n==1):
+        if(self.n==1):  ##  마지막 계층일 시
             low2 = self.low2(low1)
             low2 = self.attention(low2,bifpn_list[6-self.n])
         else:
@@ -471,6 +471,7 @@ def make_hg_layer(kernel, dim0, dim1, mod, layer=convolution, **kwargs):
     layers += [layer(kernel, dim1, dim1) for _ in range(mod - 1)]
     return nn.Sequential(*layers)
 
+### Attention 코드 ###
 class Attention(nn.Module):
     def __init__(self,input_dim):
         super(Attention, self).__init__()
@@ -526,5 +527,5 @@ class HourglassNet(exkp):
         )
 
 def get_large_hourglass_Attention_net(num_layers, heads, head_conv):
-  model = HourglassNet(heads, 2)
+  model = HourglassNet(heads, 2) ## stack - 2인 hourglass
   return model
