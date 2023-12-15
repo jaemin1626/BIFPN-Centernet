@@ -17,13 +17,13 @@ from .networks.bifpn_hourglass import get_bifpn_hourglass
 from .networks.large_hourglass_Attention import get_large_hourglass_Attention_net
 
 _model_factory = {
-  'res': get_pose_net, # default Resnet with deconv
-  'dlav0': get_dlav0, # default DLAup
-  'dla': get_dla_dcn,
-  'resdcn': get_pose_net_dcn,
-  'hourglass': get_large_hourglass_net,
-  'bifpn_hourglass': get_bifpn_hourglass,
-  'bifpn_hourglass_Attention' : get_large_hourglass_Attention_net
+  # 'res': get_pose_net, # default Resnet with deconv
+  # 'dlav0': get_dlav0, # default DLAup
+  # 'dla': get_dla_dcn,
+  # 'resdcn': get_pose_net_dcn,
+  'hourglass': get_large_hourglass_net,   ## hourglass
+  'bifpn_hourglass': get_bifpn_hourglass, ## element-wise sum bifpn
+  'bifpn_hourglass_Attention' : get_large_hourglass_Attention_net ## attention bifpn
   # 'bifpn' : get_bifpn_net
 }
 
