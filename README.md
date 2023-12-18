@@ -6,7 +6,7 @@
 <img src="./image/Bifpn_Centernet.png"/>
 
 ## Expain Data
-<li> The IP102 pest dataset is utilized for this experiment. </li>
+<li> The <a ref="https://openaccess.thecvf.com/content_CVPR_2019/papers/Wu_IP102_A_Large-Scale_Benchmark_Dataset_for_Insect_Pest_Recognition_CVPR_2019_paper.pdf">IP102 pest dataset </a> is utilized for this experiment. </li>
 <li> To obtain low-resolution images of pest photos, the existing IP102 data is downscaled by a factor of four to generate input images. </li>
 
 ## Training Environment
