@@ -24,7 +24,7 @@ _model_factory = {
   'hourglass': get_large_hourglass_net,   ## hourglass
   'bifpn_hourglass': get_bifpn_hourglass, ## element-wise sum bifpn
   'bifpn_hourglass_Attention' : get_large_hourglass_Attention_net ## attention bifpn
-  # 'bifpn' : get_bifpn_net
+  # 'bifpn' : bifpn network
 }
 
 def create_model(arch, heads, head_conv):
